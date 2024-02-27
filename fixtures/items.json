@@ -1,0 +1,1 @@
+[{"model": "payment.item", "pk": 1, "fields": {"name": "Item 1", "description": "Some description", "price": "2000.00", "currency": "usd", "order": 1}}, {"model": "payment.item", "pk": 2, "fields": {"name": "Item 2", "description": "Some description", "price": "1000.00", "currency": "eur", "order": 1}}]

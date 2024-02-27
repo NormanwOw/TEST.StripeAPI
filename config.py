@@ -1,3 +1,4 @@
+import stripe
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -13,6 +14,12 @@ class Settings(BaseSettings):
     DB_PASS: str
     DB_NAME: str
 
+    STRIPE_PUBLISHABLE_KEY: str
+    STRIPE_SECRET_KEY: str
+
 
 settings = Settings()
 
+DOMAIN_URL = 'http://localhost:8000/'
+
+stripe.api_key = settings.STRIPE_SECRET_KEY
