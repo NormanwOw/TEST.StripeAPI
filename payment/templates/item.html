@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Buy {{ item.name }}{% endblock %}
+
+{% block content %}
+<h1>{{ item.name }}</h1>
+<p>{{ item.description }}</p>
+<p>{{ item.price }} <span>{{ item.currency.upper }}</span></p>
+<button id="buy-button">Buy</button>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript">
+  const stripe = Stripe('{{ stripe_pub_key }}')
+  const buyButton = document.getElementById('buy-button')
+
+  buyButton.addEventListener('click', function() {
+    fetch('{% url 'payment:buy' item.pk %}', {method: 'GET'})
+    .then(response => response.json())
+    .then(session => {
+        stripe.redirectToCheckout({ sessionId: session.id })
+    }
+  )
+  })
+</script>
+{% endblock %}
