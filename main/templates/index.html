@@ -3,4 +3,12 @@
 {% block title %}Главная{% endblock %}
 
 {% block content %}
+<div class="main-buttons-wrapper">
+    <div>
+        <a href="{% url 'payment:item' 1 %}">Item 1</a>
+    </div>
+    <div>
+        <a href="{% url 'payment:order' 1 %}">Order 1</a>
+    </div>
+</div>
 {% endblock %}
