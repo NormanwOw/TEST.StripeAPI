@@ -2,9 +2,6 @@
 ![](https://img.shields.io/badge/Python-v3.10-green) ![](https://img.shields.io/badge/Django-v5.0-1a780c) ![](https://img.shields.io/badge/PostgreSQL-v16-blue) 
 ![](https://img.shields.io/badge/JavaScript-yellow) ![](https://img.shields.io/badge/Docker-blue) 
 
-## VPS
-* `http://95.216.65.93:13617`
-
 ## Install
 To get started:
 
